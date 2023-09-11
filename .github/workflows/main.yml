@@ -1,0 +1,32 @@
+name: Newman Postman Collection Run
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  newman_run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '18'
+
+      - name: Install Newman
+        run: npm install -g newman
+
+      - name: Run Newman
+        run: newman run src/Lesson_3.postman_collection.json -e src/Lesson_3.postman_environment.json -r cli,junit --reporter-junit-export-results.xml
+
+      # Optional step to archive the results
+      - name: Archive results
+        uses: actions/upload-artifact@v2
+        with:
+          name: newman-results
+          path: results.xml
