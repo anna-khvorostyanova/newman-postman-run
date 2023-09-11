@@ -1,0 +1,29 @@
+name: Postman Collection worklow
+
+on:
+  push:
+    branches:
+      - main
+      - feature/*
+
+jobs:
+  newman_run:
+    runs-on:  ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.0.0
+      
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3.8.1   
+        with:
+           node-version: '18'
+      - name: Install Newman & HTML reporter 
+        run: |
+            npm install -g newman
+            npm install -g newman-reporter-htmlextra
+      - name: Run tests
+        run: newman run src/Lesson_3.postman_collection.json -e src/Lesson_3.postman_environment.json -r cli,htmlextra,junit
+        
+      
+          
