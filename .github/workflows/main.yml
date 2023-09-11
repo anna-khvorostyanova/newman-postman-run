@@ -24,9 +24,24 @@ jobs:
       - name: Run Newman
         run: newman run src/Lesson_3.postman_collection.json -e src/Lesson_3.postman_environment.json -r cli,junit --reporter-junit-export-results.xml
 
-      # Optional step to archive the results
       - name: Archive results
         uses: actions/upload-artifact@v2
         with:
           name: newman-results
           path: results.xml
+      - name: Checkout gh-pages branch
+        uses: actions/checkout@v2
+        with:
+          ref: gh-pages
+          path: gh-pages
+
+      - name: Copy Report to gh-pages
+        run: cp results.xml gh-pages/
+
+      - name: Push Report to gh-pages
+        uses: cpina/github-action-push-to-branch@v1.1
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          source-directory: 'gh-pages'
+          destination-branch: 'gh-pages'
