@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Lesson 3" tests="10" time="5.925">
+  <testsuite name="Admin / Receive token" id="57a8d6d6-bce2-420e-9fa3-06dc3c8c61ee" timestamp="2024-01-09T03:15:19.759Z" tests="2" failures="0" errors="0" time="1.499">
+    <testcase name="Response time is less than 3000ms" time="1.499" classname="Lesson3"/>
+    <testcase name="Status code is 200" time="1.499" classname="Lesson3"/>
+  </testsuite>
+  <testsuite name="Admin / Create an admin" id="049c869d-d7e1-44f5-9e6b-16e9cf0adcdd" timestamp="2024-01-09T03:15:19.759Z" tests="3" failures="0" errors="0" time="0.061">
+    <testcase name="Response time is less than 3000ms" time="0.061" classname="Lesson3"/>
+    <testcase name="Status code is 400" time="0.061" classname="Lesson3"/>
+    <testcase name="Admin created" time="0.061" classname="Lesson3"/>
+  </testsuite>
+  <testsuite name="Admin / Login as an admin" id="e3459574-68a2-4525-9088-dedd74fc78f5" timestamp="2024-01-09T03:15:19.759Z" tests="2" failures="0" errors="0" time="0.372">
+    <testcase name="Response time is less than 3000ms" time="0.372" classname="Lesson3"/>
+    <testcase name="Status code is 200" time="0.372" classname="Lesson3"/>
+  </testsuite>
+  <testsuite name="Admin / Get list of teachers" id="2bb9cf34-1955-4b4b-bc56-c0069fa4af8d" timestamp="2024-01-09T03:15:19.759Z" tests="4" failures="0" errors="0" time="0.525">
+    <testcase name="Response time is less than 3000ms" time="0.525" classname="Lesson3"/>
+    <testcase name="Response status code is 200" time="0.525" classname="Lesson3"/>
+    <testcase name="Validate that the response is an array" time="0.525" classname="Lesson3"/>
+    <testcase name="Verify that the role field is a non-negative integer" time="0.525" classname="Lesson3"/>
+  </testsuite>
+  <testsuite name="Student / Create Student" id="ea055910-4566-4b4d-8e6d-8c733106a968" timestamp="2024-01-09T03:15:19.759Z" tests="2" failures="0" errors="0" time="0.374">
+    <testcase name="Response time is less than 3000ms" time="0.374" classname="Lesson3"/>
+    <testcase name="Status code is 200" time="0.374" classname="Lesson3"/>
+  </testsuite>
+  <testsuite name="Student / Login as a student" id="9a1aecc5-56e0-4489-a7d1-0f6124b01cd1" timestamp="2024-01-09T03:15:19.759Z" tests="2" failures="0" errors="0" time="0.356">
+    <testcase name="Response time is less than 3000ms" time="0.356" classname="Lesson3"/>
+    <testcase name="Status code is 200" time="0.356" classname="Lesson3"/>
+  </testsuite>
+  <testsuite name="Student / Get the list of courses" id="c8b8ce67-1c16-4a30-8fb2-de8d9461facd" timestamp="2024-01-09T03:15:19.759Z" tests="2" failures="0" errors="0" time="0.973">
+    <testcase name="Response time is less than 3000ms" time="0.973" classname="Lesson3"/>
+    <testcase name="Status code is 200" time="0.973" classname="Lesson3"/>
+  </testsuite>
+  <testsuite name="Teacher / Create teacher" id="4f1f06a8-e21c-47ac-b529-e922d2ae77cd" timestamp="2024-01-09T03:15:19.759Z" tests="2" failures="0" errors="0" time="0.368">
+    <testcase name="Response time is less than 3000ms" time="0.368" classname="Lesson3"/>
+    <testcase name="Status code is 200" time="0.368" classname="Lesson3"/>
+  </testsuite>
+  <testsuite name="Teacher / Login as a teacher" id="d31a6688-6422-4e25-b555-b1fd3b2a97ba" timestamp="2024-01-09T03:15:19.759Z" tests="2" failures="0" errors="0" time="0.484">
+    <testcase name="Response time is less than 3000ms" time="0.484" classname="Lesson3"/>
+    <testcase name="Status code is 200" time="0.484" classname="Lesson3"/>
+  </testsuite>
+  <testsuite name="Teacher / Get list of courses" id="48726ba7-c09b-4509-af8b-e34a226d5a17" timestamp="2024-01-09T03:15:19.759Z" tests="1" failures="0" errors="0" time="0.913">
+    <testcase name="Response time is less than 3000ms" time="0.913" classname="Lesson3"/>
+  </testsuite>
+</testsuites>
